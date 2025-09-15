@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango: Iosevka Term 9
+font pango: Iosevka Term 0.001
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -89,8 +89,7 @@ output * max_render_time off
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
+    bindsym $mod+Shift+e exec systemctl poweroff
 # Moving around:
 #
     # Move your focus around
@@ -231,6 +230,12 @@ client.unfocused #10100e #10100e #9b8d7f #10100e #10100e
 client.urgent #10100e #10100e #ff0000 #10100e #10100e 
 client.placeholder #10100e #10100e #9b8d7f #10100e #10100e 
 client.background #10100e
+
+
+#default_border none
+#default_floating_border none
+#titlebar_padding 1
+#titlebar_border_thickness 0
 
 bar {
     # swaybar_command swaybar
